@@ -80,7 +80,8 @@ describe MetricFu::Formatter::HTML do
       allow(MetricFu.configuration).to receive(:is_cruise_control_rb?).and_return(false)
       formatter = MetricFu::Formatter::HTML.new
       path = MetricFu.run_path.join(directory("output_directory"))
-      uri = URI.join(URI.escape("file://#{path}/"), "index.html")
+      parser = URI::Parser.new
+      uri = URI.join(parser.escape("file://#{path}/"), "index.html")
       expect(Launchy).to receive(:open).with(uri)
       formatter.finish
       formatter.display_results
@@ -125,7 +126,8 @@ describe MetricFu::Formatter::HTML do
       allow(MetricFu.configuration).to receive(:is_cruise_control_rb?).and_return(false)
       formatter = MetricFu::Formatter::HTML.new(output: @output)
       path = MetricFu.run_path.join("#{directory('base_directory')}/#{@output}")
-      uri = URI.join(URI.escape("file://#{path}/"), "index.html")
+      parser = URI::Parser.new
+      uri = URI.join(parser.escape("file://#{path}/"), "index.html")
       expect(Launchy).to receive(:open).with(uri)
       formatter.finish
       formatter.display_results
