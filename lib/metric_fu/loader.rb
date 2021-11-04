@@ -34,7 +34,7 @@ module MetricFu
     #     ::metrics_require which takes a block of files to require relative to the metrics_dir
     def create_dirs(klass)
       class << klass
-        Array(yield).each do |dir|
+        Array(LIBRARY_DIRS).each do |dir|
           define_method("#{dir}_dir") do
             File.join(lib_dir, dir)
           end
@@ -51,7 +51,7 @@ module MetricFu
     #     ::scratch_dir (which notably has the leading underscore removed)
     def create_artifact_subdirs(klass)
       class << klass
-        Array(yield).each do |dir|
+        Array(ARTIFACT_SUBDIRS).each do |dir|
           define_method("#{dir.gsub(/[^A-Za-z0-9]/, '')}_dir") do
             File.join(artifact_dir, dir)
           end

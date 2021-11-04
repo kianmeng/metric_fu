@@ -94,13 +94,9 @@ module MetricFu
 
   def_delegators :loader, :lib_require, :load_tasks
 
-  def library_dirs
-    %w(metrics formatter reporting logging errors data_structures tasks)
-  end
+  LIBRARY_DIRS = %w(metrics formatter reporting logging errors data_structures tasks)
 
-  loader.create_dirs(self) do
-    library_dirs
-  end
+  loader.create_dirs(self)
 
   # @note artifact_dir is relative to where the task is being run,
   #   not to the metric_fu library
@@ -109,13 +105,9 @@ module MetricFu
     MetricFu::Io::FileSystem.artifact_dir
   end
 
-  def artifact_subdirs
-    %w(scratch output _data)
-  end
+  ARTIFACT_SUBDIRS = %w(scratch output _data)
 
-  loader.create_artifact_subdirs(self) do
-    artifact_subdirs
-  end
+  loader.create_artifact_subdirs(self)
 
   loader.setup
 
