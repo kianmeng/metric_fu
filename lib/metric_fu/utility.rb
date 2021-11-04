@@ -35,8 +35,8 @@ module MetricFu
       FileUtils.rm_rf(*args)
     end
 
-    def mkdir_p(*args)
-      FileUtils.mkdir_p(*args)
+    def mkdir_p(dir, **args)
+      FileUtils.mkdir_p(dir, **args)
     end
 
     def glob(*args)
