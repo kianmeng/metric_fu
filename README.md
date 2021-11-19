@@ -1,4 +1,4 @@
-# MetricFu [![Gem Version](https://badge.fury.io/rb/metric_fu.svg)](http://badge.fury.io/rb/metric_fu) [![Build Status](https://travis-ci.org/metricfu/metric_fu.svg?branch=master)](http://travis-ci.org/metricfu/metric_fu)
+# MetricFu [![Gem Version](https://badge.fury.io/rb/metric_fu.svg)](http://badge.fury.io/rb/metric_fu) [![Test](https://github.com/metricfu/metric_fu/actions/workflows/ruby.yml/badge.svg)](https://github.com/metricfu/metric_fu/actions/workflows/ruby.yml)
 
 [![Join the chat at https://gitter.im/metricfu/metric_fu](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/metricfu/metric_fu?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
