@@ -1,6 +1,8 @@
 # MetricFu [![Gem Version](https://badge.fury.io/rb/metric_fu.svg)](http://badge.fury.io/rb/metric_fu) [![Test](https://github.com/metricfu/metric_fu/actions/workflows/ruby.yml/badge.svg)](https://github.com/metricfu/metric_fu/actions/workflows/ruby.yml) [![Join the chat at https://gitter.im/metricfu/metric_fu](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/metricfu/metric_fu?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Code Climate](https://codeclimate.com/github/metricfu/metric_fu.svg)](https://codeclimate.com/github/metricfu/metric_fu) [![Inline docs](http://inch-ci.org/github/metricfu/metric_fu.svg)](http://inch-ci.org/github/metricfu/metric_fu)
 
-[Rdoc](http://rdoc.info/github/metricfu/metric_fu/)
+[MetricFu](http://rdoc.info/github/metricfu/metric_fu/) is a set of tools that provides reports that shows which parts of your code might need extra work.
+
+Metrics supported: [Cane](http://github.com/square/cane), [Churn](http://github.com/danmayer/churn), [Flog](https://github.com/seattlerb/flog), [Flay](https://github.com/seattlerb/flay), [Reek](https://github.com/troessner/reek), [Roodi](https://github.com/roodi/roodi), [Saikuro](https://github.com/metricfu/Saikuro), [Code Statistics](https://github.com/bf4/code_metrics), [Hotspots](https://github.com/chiku/hotspots), [SimpleCov](https://github.com/simplecov-ruby/simplecov), [Rcov](https://github.com/relevance/rcov), [Rails Best Practices](https://github.com/flyerhzm/rails_best_practices) (Rails-only).
 
 ## Installation
 
@@ -262,23 +264,6 @@ This is the official repository for metric_fu. The original repository by Jake S
 - [Outdated Homepage](http://metricfu.github.io/metric_fu/)
 - [List of code tools](https://github.com/metricfu/metric_fu/wiki/Code-Tools)
 - [Roadmap](https://github.com/metricfu/metric_fu/wiki/Roadmap)
-
-### Metrics
-
-- [Cane](https://rubygems.org/gems/cane), [Source](http://github.com/square/cane)
-- [Churn](https://rubygems.org/gems/churn), [Source](http://github.com/danmayer/churn)
-- [Flog](https://rubygems.org/gems/flog), [Source](https://github.com/seattlerb/flog)
-- [Flay](https://rubygems.org/gems/flay), [Source](https://github.com/seattlerb/flay)
-- [Reek](https://rubygems.org/gems/reek) [Source](https://github.com/troessner/reek)
-- [Roodi](https://rubygems.org/gems/roodi), [Source](https://github.com/roodi/roodi)
-- [Saikuro](https://rubygems.org/gems/metric_fu-Saikuro), [Source](https://github.com/metricfu/Saikuro)
-- [Code Statistics](https://rubygems.org/gems/code_metrics), [Source](https://github.com/bf4/code_metrics)
-- Rails-only
-  - [Rails Best Practices](https://rubygems.org/gems/rails_best_practices), [Source](https://github.com/railsbp/rails_best_practices)
-- Test Coverage
-  - 1.9: [SimpleCov](http://rubygems.org/gems/simplecov) and SimpleCov::Formatter::MetricFu
-  - 1.8: [Rcov](http://rubygems.org/gems/rcov)
-- Hotspots (a meta-metric of the above)
 
 ### Original Resources:
 
