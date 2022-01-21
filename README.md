@@ -6,12 +6,25 @@ Metrics supported: [Cane](http://github.com/square/cane), [Churn](http://github.
 
 ## Installation
 
-    gem install metric_fu
+Run:
 
-If you have trouble installing the gem
+```
+$ gem install metric_fu
+```
 
-- try adding metric_fu to your Gemfile and bundling.
-- file a ticket on the issues page.
+Or add this line to your application's Gemfile:
+
+```ruby
+gem 'skunk'
+```
+
+And then execute:
+
+```
+$ bundle
+```
+
+### Considerations
 
 MetricFu is [cryptographically signed](http://guides.rubygems.org/security/).
 To be sure the gem you install hasn't been tampered with:
