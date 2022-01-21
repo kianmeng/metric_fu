@@ -15,7 +15,7 @@ $ gem install metric_fu
 Or add this line to your application's Gemfile:
 
 ```ruby
-gem 'skunk'
+gem 'metric_fu'
 ```
 
 And then execute:
