@@ -226,7 +226,7 @@ By default, MetricFu uses the Bluff (JavaScript) graph engine.
 MetricFu.configuration.configure_graph_engine(:bluff)
 ```
 
-But it you may also use the [Highcharts JS library](http://shop.highsoft.com/highcharts.html)
+But you can also use the [Highcharts JS library](https://shop.highsoft.com/)
 
 ```ruby
 MetricFu.configuration.configure_graph_engine(:highcharts)
