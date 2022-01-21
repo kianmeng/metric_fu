@@ -2,10 +2,6 @@
 
 [Rdoc](http://rdoc.info/github/metricfu/metric_fu/)
 
-## Maintenance
-
-MetricFu needs maintainers. If you are up for helping out, please left a note in [issue 280](https://github.com/metricfu/metric_fu/issues/280). MetricFu is free and open source code that belongs to everyone. Benjamin (@bf4) hasn't been working on MetricFu for a while, which is a great opportunity for you to step up!
-
 ## Installation
 
     gem install metric_fu
