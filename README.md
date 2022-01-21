@@ -25,8 +25,8 @@ This is necessary because not all of MetricFu's dependencies are signed, so we c
 
 From your application root. Running via Rake is still supported.
 
-```sh
-metric_fu
+```
+$ metric_fu
 ```
 
 See:
@@ -232,7 +232,7 @@ But you can also use the [Highcharts JS library](https://shop.highsoft.com/)
 MetricFu.configuration.configure_graph_engine(:highcharts)
 ```
 
-Notice: There was previously a :gchart option.
+Notice: There was previously a `:gchart` option.
 It was not properly deprecated in the 4.x series.
 
 ## Common problems / debugging
