@@ -208,7 +208,7 @@ Then
 metric_fu --format MyCustomFormatter
 ```
 
-See [lib/metric_fu/formatter/](lib/metric_fu/formatter/) for examples.
+See [lib/metric_fu/formatter](https://github.com/metricfu/metric_fu/tree/main/lib/metric_fu/formatter) for examples.
 
 MetricFu will attempt to require a custom formatter by
 fully qualified name based on ruby search path. So if you include a custom
