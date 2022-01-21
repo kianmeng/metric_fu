@@ -46,7 +46,7 @@ _Questions, Problems, Suggestions, etc._
 
 - [Google Group](https://groups.google.com/forum/#!forum/metric_fu)
 
-## Documentation
+## Configuration
 
 MetricFu will attempt to load configuration data from a
 `.metrics` file, if present in your repository root.
