@@ -38,28 +38,13 @@ This is necessary because not all of MetricFu's dependencies are signed, so we c
 
 ## Usage
 
-From your application root. Running via Rake is still supported.
+From your application root, run:
 
 ```
 $ metric_fu
 ```
 
-See:
-
-- `metric_fu --help` for more options
-- Documentation and Compatibility below
-- There is also a [wiki page of user-maintained usage information](https://github.com/metricfu/metric_fu/wiki#usage)
-
-## Contact
-
-_Code and Bug Reports_
-
-- [Issue Tracker](http://github.com/metricfu/metric_fu/issues)
-  - See [CONTRIBUTING](https://github.com/metricfu/metric_fu/blob/master/CONTRIBUTING.md) for how to contribute
-
-_Questions, Problems, Suggestions, etc._
-
-- [Google Group](https://groups.google.com/forum/#!forum/metric_fu)
+To see available options run `metric_fu --help`
 
 ## Configuration
 
@@ -265,25 +250,16 @@ It was not properly deprecated in the 4.x series.
 
 - The Cane, Flog, and Rails Best Practices metrics are disabled when Ripper is not available
 
-### Historical
+## Contributing
 
-There is some useful-but-out-of-date documentation about configuring metric_fu at http://metricfu.github.io/metric_fu and a change log in the the HISTORY file.
+Take a look at our [contributing guide](https://github.com/metricfu/metric_fu/blob/master/CONTRIBUTING.md).
+Bug reports and pull requests are welcome on GitHub at [https://github.com/metricfu/metric_fu](https://github.com/metricfu/metric_fu). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Code of Conduct](https://www.contributor-covenant.org/version/1/4/code-of-conduct/).
 
-## Resources:
+## Resources
 
-This is the official repository for metric_fu. The original repository by Jake Scruggs at [https://github.com/jscruggs/metric_fu](https://github.com/jscruggs/metric_fu) has been deprecated.
-
-- [Official Repository](http://github.com/metricfu/metric_fu)
-- [Outdated Homepage](http://metricfu.github.io/metric_fu/)
+- [Wiki](https://github.com/metricfu/metric_fu/wiki)
 - [List of code tools](https://github.com/metricfu/metric_fu/wiki/Code-Tools)
 - [Roadmap](https://github.com/metricfu/metric_fu/wiki/Roadmap)
-
-### Original Resources:
-
-- Github: http://github.com/jscruggs/metric_fu
-- Issue Tracker: http://github.com/jscruggs/metric_fu/issues
-- Historical Homepage: http://metric-fu.rubyforge.org/
-- Jake's Blog: http://jakescruggs.blogspot.com/
-- Jake's Post about stepping down: http://jakescruggs.blogspot.com/2012/08/why-i-abandoned-metricfu.html
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/metricfu/metric_fu/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+- [Google Group](https://groups.google.com/forum/#!forum/metric_fu)
+- [Original repository by Jake Scruggs](https://github.com/jscruggs/metric_fu)
+- [Jake's post about stepping down](http://jakescruggs.blogspot.com/2012/08/why-i-abandoned-metricfu.html)
