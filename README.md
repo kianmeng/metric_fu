@@ -1,25 +1,34 @@
-# MetricFu [![Gem Version](https://badge.fury.io/rb/metric_fu.svg)](http://badge.fury.io/rb/metric_fu) [![Test](https://github.com/metricfu/metric_fu/actions/workflows/ruby.yml/badge.svg)](https://github.com/metricfu/metric_fu/actions/workflows/ruby.yml)
+# MetricFu [![Gem Version](https://badge.fury.io/rb/metric_fu.svg)](http://badge.fury.io/rb/metric_fu) [![Test](https://github.com/metricfu/metric_fu/actions/workflows/ruby.yml/badge.svg)](https://github.com/metricfu/metric_fu/actions/workflows/ruby.yml) [![Join the chat at https://gitter.im/metricfu/metric_fu](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/metricfu/metric_fu?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) [![Code Climate](https://codeclimate.com/github/metricfu/metric_fu.svg)](https://codeclimate.com/github/metricfu/metric_fu) [![Inline docs](http://inch-ci.org/github/metricfu/metric_fu.svg)](http://inch-ci.org/github/metricfu/metric_fu)
 
-[![Join the chat at https://gitter.im/metricfu/metric_fu](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/metricfu/metric_fu?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[MetricFu](http://rdoc.info/github/metricfu/metric_fu/) is a set of tools to provide reports that show which parts of your code might need extra work.
 
-[![Code Climate](https://codeclimate.com/github/metricfu/metric_fu.svg)](https://codeclimate.com/github/metricfu/metric_fu) [![Inline docs](http://inch-ci.org/github/metricfu/metric_fu.svg)](http://inch-ci.org/github/metricfu/metric_fu)
-
-[Rdoc](http://rdoc.info/github/metricfu/metric_fu/)
-
-## Maintenance
-
-MetricFu needs maintainers.  If you are up for helping out, please left a note in [issue 280]( https://github.com/metricfu/metric_fu/issues/280).  MetricFu is free and open source code that belongs to everyone.  Benjamin (@bf4) hasn't been working on MetricFu for a while, which is a great opportunity for you to step up!
+Metrics supported: [Cane](http://github.com/square/cane), [Churn](http://github.com/danmayer/churn), [Flog](https://github.com/seattlerb/flog), [Flay](https://github.com/seattlerb/flay), [Reek](https://github.com/troessner/reek), [Roodi](https://github.com/roodi/roodi), [Saikuro](https://github.com/metricfu/Saikuro), [Code Statistics](https://github.com/bf4/code_metrics), [Hotspots](https://github.com/chiku/hotspots), [SimpleCov](https://github.com/simplecov-ruby/simplecov), [Rcov](https://github.com/relevance/rcov), [Rails Best Practices](https://github.com/flyerhzm/rails_best_practices) (Rails-only).
 
 ## Installation
 
-    gem install metric_fu
+Run:
 
-If you have trouble installing the gem
-- try adding metric_fu to your Gemfile and bundling.
-- file a ticket on the issues page.
+```
+$ gem install metric_fu
+```
+
+Or add this line to your application's Gemfile:
+
+```ruby
+gem 'metric_fu'
+```
+
+And then execute:
+
+```
+$ bundle
+```
+
+### Considerations
 
 MetricFu is [cryptographically signed](http://guides.rubygems.org/security/).
 To be sure the gem you install hasn't been tampered with:
+
 - Add my public key (if you haven't already) as a trusted certificate `gem cert --add <(curl -Ls https://raw.github.com/metricfu/metric_fu/master/certs/bf4.pem)`
 - `gem install metric_fu -P MediumSecurity`
 
@@ -29,29 +38,15 @@ This is necessary because not all of MetricFu's dependencies are signed, so we c
 
 ## Usage
 
-From your application root. Running via Rake is still supported.
+From your application root, run:
 
-```sh
-metric_fu
+```
+$ metric_fu
 ```
 
-See:
-- `metric_fu --help` for more options
-- Documentation and Compatibility below
-- There is also a [wiki page of user-maintained usage information](https://github.com/metricfu/metric_fu/wiki#usage)
+To see available options run `metric_fu --help`
 
-## Contact
-
-*Code and Bug Reports*
-
-* [Issue Tracker](http://github.com/metricfu/metric_fu/issues)
-  * See [CONTRIBUTING](https://github.com/metricfu/metric_fu/blob/master/CONTRIBUTING.md) for how to contribute
-
-*Questions, Problems, Suggestions, etc.*
-
-* [Google Group](https://groups.google.com/forum/#!forum/metric_fu)
-
-## Documentation
+## Configuration
 
 MetricFu will attempt to load configuration data from a
 `.metrics` file, if present in your repository root.
@@ -171,7 +166,6 @@ metric_fu --out $HOME/tmp/metrics      # outputs to $HOME/tmp/metrics
 
 You can specify a different formatter at the command line by referencing a built-in formatter or providing the fully-qualified name of a custom formatter.
 
-
 ```sh
 metric_fu --format yaml --out custom_report.yml
 ```
@@ -214,7 +208,7 @@ Then
 metric_fu --format MyCustomFormatter
 ```
 
-See [lib/metric_fu/formatter/](lib/metric_fu/formatter/) for examples.
+See [lib/metric_fu/formatter](https://github.com/metricfu/metric_fu/tree/main/lib/metric_fu/formatter) for examples.
 
 MetricFu will attempt to require a custom formatter by
 fully qualified name based on ruby search path. So if you include a custom
@@ -224,7 +218,7 @@ your .metrics configuration file.
 
 For instance, to require a formatter in your app's lib directory `require './lib/my_custom_formatter.rb'`
 
-###  Configure Graph Engine
+### Configure Graph Engine
 
 By default, MetricFu uses the Bluff (JavaScript) graph engine.
 
@@ -232,68 +226,40 @@ By default, MetricFu uses the Bluff (JavaScript) graph engine.
 MetricFu.configuration.configure_graph_engine(:bluff)
 ```
 
-But it you may also use the [Highcharts JS library](http://shop.highsoft.com/highcharts.html)
+But you can also use the [Highcharts JS library](https://shop.highsoft.com/)
 
 ```ruby
 MetricFu.configuration.configure_graph_engine(:highcharts)
 ```
 
-Notice: There was previously a :gchart option.
+Notice: There was previously a `:gchart` option.
 It was not properly deprecated in the 4.x series.
 
 ## Common problems / debugging
 
 - ['ArgumentError; message invalid byte sequence in US-ASCII'](https://github.com/metricfu/metric_fu/issues/215) may be caused by having a default external encoding that is not UTF-8. You can see this in the output of `metric_fu --debug`
-  - OSX: Ensure you have set `LANG=en_US.UTF-8` and `LC_ALL=en_US.UTF-8`.  You can add these to your `~/.profile`.
+  - OSX: Ensure you have set `LANG=en_US.UTF-8` and `LC_ALL=en_US.UTF-8`. You can add these to your `~/.profile`.
 
 ## Compatibility
 
-* It is currently testing on MRI (>= 1.9.3), JRuby (19 mode), and Rubinius (19 mode). Ruby 1.8 is no longer supported.
+- It is currently testing on MRI (>= 1.9.3), JRuby (19 mode), and Rubinius (19 mode). Ruby 1.8 is no longer supported.
 
-* For 1.8.7 support, see version 3.0.0 for partial support, or 2.1.3.7.18.1 (where [Semantic Versioning](http://semver.org/) goes to die)
+- For 1.8.7 support, see version 3.0.0 for partial support, or 2.1.3.7.18.1 (where [Semantic Versioning](http://semver.org/) goes to die)
 
-* MetricFu no longer runs any of the analyzed code. For code coverage, you may use a formatter as documented above
+- MetricFu no longer runs any of the analyzed code. For code coverage, you may use a formatter as documented above
 
-* The Cane, Flog, and Rails Best Practices metrics are disabled when Ripper is not available
+- The Cane, Flog, and Rails Best Practices metrics are disabled when Ripper is not available
 
-### Historical
+## Contributing
 
-There is some useful-but-out-of-date documentation about configuring metric_fu at http://metricfu.github.io/metric_fu and a change log in the the HISTORY file.
+Take a look at our [contributing guide](https://github.com/metricfu/metric_fu/blob/master/CONTRIBUTING.md).
+Bug reports and pull requests are welcome on GitHub at [https://github.com/metricfu/metric_fu](https://github.com/metricfu/metric_fu). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Code of Conduct](https://www.contributor-covenant.org/version/1/4/code-of-conduct/).
 
-## Resources:
+## Resources
 
-This is the official repository for metric_fu.  The original repository by Jake Scruggs at [https://github.com/jscruggs/metric_fu](https://github.com/jscruggs/metric_fu) has been deprecated.
-
-* [Official Repository](http://github.com/metricfu/metric_fu)
-* [Outdated Homepage](http://metricfu.github.io/metric_fu/)
-* [List of code tools](https://github.com/metricfu/metric_fu/wiki/Code-Tools)
-* [Roadmap](https://github.com/metricfu/metric_fu/wiki/Roadmap)
-
-### Metrics
-
-* [Cane](https://rubygems.org/gems/cane), [Source](http://github.com/square/cane)
-* [Churn](https://rubygems.org/gems/churn), [Source](http://github.com/danmayer/churn)
-* [Flog](https://rubygems.org/gems/flog), [Source](https://github.com/seattlerb/flog)
-* [Flay](https://rubygems.org/gems/flay), [Source](https://github.com/seattlerb/flay)
-* [Reek](https://rubygems.org/gems/reek) [Source](https://github.com/troessner/reek)
-* [Roodi](https://rubygems.org/gems/roodi), [Source](https://github.com/roodi/roodi)
-* [Saikuro](https://rubygems.org/gems/metric_fu-Saikuro), [Source](https://github.com/metricfu/Saikuro)
-* [Code Statistics](https://rubygems.org/gems/code_metrics), [Source](https://github.com/bf4/code_metrics)
-* Rails-only
-  * [Rails Best Practices](https://rubygems.org/gems/rails_best_practices), [Source](https://github.com/railsbp/rails_best_practices)
-* Test Coverage
-  * 1.9: [SimpleCov](http://rubygems.org/gems/simplecov) and SimpleCov::Formatter::MetricFu
-  * 1.8: [Rcov](http://rubygems.org/gems/rcov)
-* Hotspots (a meta-metric of the above)
-
-
-### Original Resources:
-
-* Github: http://github.com/jscruggs/metric_fu
-* Issue Tracker: http://github.com/jscruggs/metric_fu/issues
-* Historical Homepage: http://metric-fu.rubyforge.org/
-* Jake's Blog: http://jakescruggs.blogspot.com/
-* Jake's Post about stepping down: http://jakescruggs.blogspot.com/2012/08/why-i-abandoned-metricfu.html
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/metricfu/metric_fu/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+- [Wiki](https://github.com/metricfu/metric_fu/wiki)
+- [List of code tools](https://github.com/metricfu/metric_fu/wiki/Code-Tools)
+- [Roadmap](https://github.com/metricfu/metric_fu/wiki/Roadmap)
+- [Google Group](https://groups.google.com/forum/#!forum/metric_fu)
+- [Original repository by Jake Scruggs](https://github.com/jscruggs/metric_fu)
+- [Jake's post about stepping down](http://jakescruggs.blogspot.com/2012/08/why-i-abandoned-metricfu.html)
