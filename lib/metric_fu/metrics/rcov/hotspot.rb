@@ -39,8 +39,8 @@ class MetricFu::RcovHotspot < MetricFu::Hotspot
   end
 
   def present_group(group)
-    occurences = group.size
+    occurrences = group.size
     average_code_uncoverage = get_mean(group.column("percentage_uncovered"))
-    "#{'average ' if occurences > 1}uncovered code is %.1f%" % average_code_uncoverage
+    "#{'average ' if occurrences > 1}uncovered code is %.1f%" % average_code_uncoverage
   end
 end

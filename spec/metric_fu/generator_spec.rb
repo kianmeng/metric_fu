@@ -97,7 +97,7 @@ describe MetricFu::Generator do
         @container.destroy!
       end
 
-      it "should return entire pathlist given no exclude pattens" do
+      it "should return entire pathlist given no exclude patterns" do
         files = @concrete_class.remove_excluded_files(@paths)
         expect(files).to eq(@paths)
       end

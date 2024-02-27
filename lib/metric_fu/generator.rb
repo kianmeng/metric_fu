@@ -26,7 +26,7 @@ module MetricFu
   # named after the metric under the scratch_directory, where
   # any output from the #emit method should go.
   #
-  # It will also create the output_directory if neccessary, and
+  # It will also create the output_directory if necessary, and
   # in general setup the directory structure that the MetricFu system
   # expects.
   class Generator

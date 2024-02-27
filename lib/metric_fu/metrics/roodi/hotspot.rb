@@ -33,7 +33,7 @@ class MetricFu::RoodiHotspot < MetricFu::Hotspot
   end
 
   def present_group(group)
-    occurences = group.size
-    "found #{occurences} design problems"
+    occurrences = group.size
+    "found #{occurrences} design problems"
   end
 end

@@ -62,7 +62,7 @@ module MetricFu
         begin
           match = class_or_method_name.match(/(.*)((\.|\#|\:\:[a-z])(.+))/)
         rescue => error
-          # new error during port to metric_fu occasionally a unintialized
+          # new error during port to metric_fu occasionally a uninitialized
           # MatchData object shows up here. Not expected.
           mf_debug "ERROR on getting location for #{class_or_method_name} #{error.inspect}"
           match = nil

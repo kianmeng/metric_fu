@@ -46,7 +46,7 @@ class MetricFu::FlayHotspot < MetricFu::Hotspot
   end
 
   def present_group(group)
-    occurences = group.size
-    "found #{occurences} code duplications"
+    occurrences = group.size
+    "found #{occurrences} code duplications"
   end
 end

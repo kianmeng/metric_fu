@@ -12,7 +12,7 @@ module MetricFu
         filter_cyclo: "0",
         warn_cyclo: "5",
         error_cyclo: "7",
-        formater: "text",
+        formatter: "text",
       }
     end
 

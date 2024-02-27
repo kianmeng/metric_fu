@@ -14,7 +14,7 @@ describe RailsBestPracticesGenerator do
 
   describe "analyze method" do
     let(:error) { ::RailsBestPractices::Core::Error.new }
-    context "RailsBestPractices provdies the expected API" do
+    context "RailsBestPractices provides the expected API" do
       it { expect(error).to respond_to :filename }
       it { expect(error).to respond_to :line_number }
       it { expect(error).to respond_to :message }

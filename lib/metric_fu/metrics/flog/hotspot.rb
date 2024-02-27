@@ -39,8 +39,8 @@ class MetricFu::FlogHotspot < MetricFu::Hotspot
   end
 
   def present_group(group)
-    occurences = group.size
+    occurrences = group.size
     complexity = get_mean(group.column("score"))
-    "#{'average ' if occurences > 1}complexity is %.1f" % complexity
+    "#{'average ' if occurrences > 1}complexity is %.1f" % complexity
   end
 end

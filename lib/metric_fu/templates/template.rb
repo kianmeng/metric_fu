@@ -43,7 +43,7 @@ module MetricFu
       erb
     end
 
-    # Copies an instance variable mimicing the name of the section
+    # Copies an instance variable mimicking the name of the section
     # we are trying to render, with a value equal to the passed in
     # constant.  Allows the concrete template classes to refer to
     # that instance variable from their ERB rendering

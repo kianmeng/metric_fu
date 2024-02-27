@@ -55,8 +55,8 @@ class MetricFu::ReekHotspot < MetricFu::Hotspot
   end
 
   def present_group(group)
-    occurences = group.size
-    "found #{occurences} code smells"
+    occurrences = group.size
+    "found #{occurrences} code smells"
   end
 
   private

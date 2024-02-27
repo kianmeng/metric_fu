@@ -1771,7 +1771,7 @@
     - :was_run: true
       :content: "                       :error_cyclo => \"7\","
     - :was_run: true
-      :content: "                       :formater => \"text\"}"
+      :content: "                       :formatter => \"text\"}"
     - :was_run: true
       :content: "         @churn    = {}"
     - :was_run: true
@@ -2682,7 +2682,7 @@
     - :was_run: true
       :content: "     #"
     - :was_run: true
-      :content: "     # It will also create the MetricFu.output_directory if neccessary, and"
+      :content: "     # It will also create the MetricFu.output_directory if necessary, and"
     - :was_run: true
       :content: "     # in general setup the directory structure that the MetricFu system"
     - :was_run: true
@@ -3159,7 +3159,7 @@
     - :was_run: true
       :content: "       "
     - :was_run: true
-      :content: "       # Copies an instance variable mimicing the name of the section"
+      :content: "       # Copies an instance variable mimicking the name of the section"
     - :was_run: true
       :content: "       # we are trying to render, with a value equal to the passed in "
     - :was_run: true

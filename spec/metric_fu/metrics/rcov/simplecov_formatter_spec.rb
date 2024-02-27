@@ -42,7 +42,7 @@ describe SimpleCov::Formatter::MetricFu do
         result = SimpleCov.result # end coverage
         source_file = result.source_files.first
 
-        # formatter ouputs this from simplecov result
+        # formatter outputs this from simplecov result
         rcov_text = SimpleCov::Formatter::MetricFu::FormatLikeRCov.new(result).format
 
         # generator analyzes the rcov text

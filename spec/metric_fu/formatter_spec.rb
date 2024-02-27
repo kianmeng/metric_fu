@@ -38,7 +38,7 @@ describe MetricFu::Formatter do
       end
     end
 
-    context "given a custom formatter that doesnt exist" do
+    context "given a custom formatter that doesn't exist" do
       subject { MetricFu::Formatter.class_for("MyNonExistentCustomFormatter") }
 
       it "raises an error" do

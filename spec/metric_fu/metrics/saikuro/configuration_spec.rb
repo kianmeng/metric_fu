@@ -9,7 +9,7 @@ describe MetricFu::Configuration, "for saikuro" do
                                  :filter_cyclo => '0',
                                  :warn_cyclo => '5',
                                  :error_cyclo => '7',
-                                 :formater => 'text' }" do
+                                 :formatter => 'text' }" do
       load_metric "saikuro"
       expect(MetricFu::Metric.get_metric(:saikuro).run_options).to eq(
                output_directory: "#{scratch_directory}/saikuro",
@@ -18,7 +18,7 @@ describe MetricFu::Configuration, "for saikuro" do
                filter_cyclo: "0",
                warn_cyclo: "5",
                error_cyclo: "7",
-               formater: "text"
+               formatter: "text"
                     )
     end
   end

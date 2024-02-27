@@ -69,7 +69,7 @@ As such, a _Feature_ would map to either major (breaking change) or minor. A _bu
     The old `mf_debug` and `mf_log` main mixin is presevered.  Needs documentation. See #113. (Benjamin Fleischer, a49bfdd182)
   * Use *launchy* (new dependency) when opening output files. (Nick Veys, #224)
   * Coverage formatter now behaves like SimpleCov; it ignores certain lines in
-    calculating the precent run. Fixes #153, #222 (Benjamin Fleischer, #226).
+    calculating the percent run. Fixes #153, #222 (Benjamin Fleischer, #226).
     - Thanks to @crv for the test in #153
     - Note: JRuby will usually report different Coverage from MRI. This is a known issue.
     - Note: This technically is a *breaking change* from how RCov works. But wwe don't run RCov anymore. (65bf21723291f)
@@ -86,7 +86,7 @@ As such, a _Feature_ would map to either major (breaking change) or minor. A _bu
   * Rename ReekHotspot to MetricFu::ReekHotspot.  Was missing namespace. (Benjamin Fleischer, a3aa70c1a9)
   * Allow failures for Ruby 2.1, in addition to rbx per issues with rvm.  (Benjamin Fleischer, 3018b22)
   * `spec/quality_spec.rb` checks for whitespace, tabs, quotes, etc. `rake spec` also checks for warnings. (Benjamin Fleischer, b0c51bb9b17)
-  * When run with COVERAGE=true, will ouptut a file to `coverage/coverage_percent.txt` that can be checked via `rake check_code_coverage`. Borrowed from VCR. (Benjamin Fleischer, 32df3a34c6)
+  * When run with COVERAGE=true, will output a file to `coverage/coverage_percent.txt` that can be checked via `rake check_code_coverage`. Borrowed from VCR. (Benjamin Fleischer, 32df3a34c6)
 
 ### [4.10.0 / 2014-04-01](https://github.com/metricfu/metric_fu/compare/v4.9.0...v4.10.0)
 
@@ -284,7 +284,7 @@ add all contriubtors
   * Skip reek when no files are found to run against.  Otherwise, reek hangs trying to read from STDIN (Benjamin Fleischer, #119, #121)
   * Reek will now find files on Windows.  Remove *nix-specific '/' directory separators from Reek file glob.  (Benjamin Fleischer, #119, #121)
   * Link to correct reek url on report. (Calveto #116)
-  * Hack to accomodate Rails Best Practices dependency Code Analyzer monkey patch of Sexp (Benjamin Fleischer #123, #124)
+  * Hack to accommodate Rails Best Practices dependency Code Analyzer monkey patch of Sexp (Benjamin Fleischer #123, #124)
 * Misc
   * Moved environmental concerns into an Environment module ( Benjamin Fleischer / Robin Curry #91, #111)
   * Exposed RubyParser patch ( Benjamin Fleischer / Robin Curry #91, #111)
@@ -435,7 +435,7 @@ add all contriubtors
   * MetricFu::MetricAnalyzer
   * MetricFu::AnalysisError
   * MetricFu::HotspotScoringStrategies
-* Rename MetricAnalyzer to HotspotAnalyzer, and rename all <metric>Analzyer classes to <metric>Hotspot to signify that they are part of the Hotspot code -Benjamin Fleischer
+* Rename MetricAnalyzer to HotspotAnalyzer, and rename all <metric>Analyzer classes to <metric>Hotspot to signify that they are part of the Hotspot code -Benjamin Fleischer
 
 ### MetricFu 2.1.3.4 / 2012-12-28
 
